@@ -6,7 +6,7 @@
 
 - If yarn is not installed, install it with `npm i -g yarn`
 
-## Usage
+## Usage locally
 
 - Create password with length of 12
 
