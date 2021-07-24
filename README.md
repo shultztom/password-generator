@@ -8,13 +8,13 @@
 
 ## Usage locally
 
-- Create password with length of 12
+Create password with length of 12
 
 ```
 yarn start
 ```
 
-- Create password with custom length
+Create password with custom length
 
 ```
 yarn start --length=20
@@ -23,5 +23,9 @@ yarn start --length=20
 ## Usage with npx
 
 ```
-npx npx @shultztom/password-generator 
+# Default
+npx @shultztom/password-generator 
+
+# Custom length
+npx @shultztom/password-generator --length=30
 ```
