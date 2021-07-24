@@ -19,3 +19,9 @@ yarn start
 ```
 yarn start --length=20
 ```
+
+## Usage with npx
+
+```
+npx npx @shultztom/password-generator 
+```
