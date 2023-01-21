@@ -4,7 +4,7 @@
 const {program} = require('commander');
 const crypto = require('crypto');
 
-program.version('1.0.0');
+program.version('1.2.0');
 
 program
     .option('--length <length>', "Length of password")
@@ -19,8 +19,11 @@ if(length <= 0){
 
 const wishlist = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~!@-#$';
 
-const password = Array.from(crypto.randomFillSync(new Uint32Array(length)))
-    .map((x) => wishlist[x % wishlist.length])
-    .join("");
+const generateRandomString = (length) => {
+    let array = new Uint32Array(length);
+    return Array.from(crypto.getRandomValues(array)).map((x) => wishlist[x % wishlist.length]).join(""); // getRandomValues introduced in Node 17.4.0
+  }
+
+const password = generateRandomString(length);
 
 console.log(password);
